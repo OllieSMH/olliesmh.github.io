@@ -1,0 +1,92 @@
+
+/* Navigation bar */
+.navBar {
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100vw;
+}
+
+.navBar li {
+    float: left;
+    width: 10vw;
+}
+
+/* Logo floats to the right of the list */
+.navBar li:last-of-type {
+    float: right;
+    margin-right: -3.5vw;
+}
+
+.logo {
+    width: 3vw;
+    top: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+
+/* Lines around the navBar */
+hr {
+    border-color: var(--mainColour);
+}
+
+/* Buttons for navigating the site */
+.button {
+    display: inline-block;
+    background-color: var(--background);
+    color: var(--mainColour);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.6vw;
+    margin: 0.5vw;
+    font-size: 1.5vw;
+    transition: 0.4s;
+}
+
+.button:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.6vw;
+}
+
+#applyTheme {
+    width: 20vw;
+}
+
+.themeLabel {
+    display: inline-block;
+    background-color: var(--background);
+    color: var(--mainColour);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.6vw;
+    margin: 0.5vw;
+    margin-right: -2.5vw;
+    font-size: 1.5vw;
+    transition: 0.4s;
+}
+
+/* Current page button */
+.buttonActive {
+    display: inline-block;
+    background-color: var(--tertiary);
+    color: var(--mainColour);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.6vw;
+    margin: 0.5vw;
+    font-size: 1.5vw;
+    transition: 0.4s;
+}
+
+.buttonActive:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.6vw;
+}

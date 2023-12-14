@@ -1,0 +1,99 @@
+
+/* General and variables */
+* {
+    box-sizing: border-box;
+    /* color: rgb(245, 149, 24); */
+}
+
+:root {
+    --background: aliceblue;
+    --mainColour: black;
+    --secondary: wheat;
+    --tertiary: #999;
+    --contrast: #333;
+}
+
+/* Body in sans-serif for ease of reading */
+body {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    background: var(--background);
+    color: var(--mainColour);
+    font-family: Helvetica, sans-serif;
+    font-size: 1vw;
+    transition: 0.4s;
+}
+
+/* Minimum font size */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+/* Maximum font size */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+/* Headers in serif font for class ;) */
+h1, h2, h3, h4, h5, h6, header {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size: 1.8vw;
+}
+
+h3 {
+    font-size: 1.6vw;
+}
+
+h4 {
+    font-size: 1.4vw;
+}
+
+h5 {
+    font-size: 1.2vw;
+}
+
+h6 {
+    font-size: 1vw;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainColour);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Hide all elements with this class */
+.hidden {
+    display: none;
+}
+
+/*  */

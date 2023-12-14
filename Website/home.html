@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link id="theme1" rel="stylesheet" href="styles/styles.css">
+    <link id="theme2" rel="stylesheet" href="styles/general.css">
+    <link id="theme3" rel="stylesheet" href="styles/navBar.css">
+</head>
+
+<body>
+    <header>
+        <!-- Header atop page -->
+        <div id="header" class="mainHeader">
+            <h1 class="pageTopper">Welcome!</h1>
+            <hr>
+        </div>
+    </header>
+
+    <nav id="navBar">
+        <!-- Navigation bar -->
+        <ul class="navBar">
+            <li class="button" onclick="pageChanger('resume.html')">Resume</li>
+            <li class="button" onclick="pageChanger('hobbies.html')">Hobbies</li>
+            <li class="button" onclick="pageChanger('contactMe.html')">Contact Me</li>
+            <li class="themeLabel">
+                <label for="themes">Theme:</label>
+            </li>
+            <li>
+                <select class="button" name="themes" id="toggleTheme">
+                    <option value="Light">Light</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </li>
+            <li><button id="applyTheme" type="button" class="button" onclick="getTheme()">Apply Theme</button></li>
+            <li><a class="button" href="home.html"><img src="Images/New Logo.png" alt="logo" class="logo"></a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <main>
+        <article id="sidebar1" class="sidebarLeft">
+            <h4>WELCOME!</h4><hr>
+            <p>"He actually put a cat meme on his final project?" - You</p>
+            <p>Well yes, just wait until you click it! ;)</p>
+        </article>
+
+        <h1 class="centralHeader">Click the Cat to Continue</h1>
+
+        <div id="welcome" class="welcome" onclick="maow()">
+            <img class="homeImg" src="Images/sadCat.png">
+
+            <audio class="hidden" id="maow" controls preload="auto">
+                <source src="sounds/maow.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <article id="sidebar2" class="sidebarRight">
+            <h6>Psssst... Over here!</h6><hr>
+            <p>I may have hidden some secrets on the pages so look carefully!</p>
+        </article>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="secretEntrance" class="secretGate" onclick="secret1('secret.html')">A secret?</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="secret1" class="sidebarLeft" onclick="hmm()">Like way down here!</div>
+
+        <br>
+        <br>
+        <br>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
