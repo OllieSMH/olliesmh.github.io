@@ -23,6 +23,10 @@
             root.setProperty('--secondary', 'wheat');
             root.setProperty('--tertiary', '#999');
             root.setProperty('--contrast', '#333');
+            root.setProperty('--p1', 'rgb(162, 162, 212)')
+            root.setProperty('--p2', 'rgb(151, 212, 156)')
+            root.setProperty('--p1Secondary', 'rgb(52, 92, 150)')
+            root.setProperty('--p2Secondary', 'rgb(29, 80, 13)')
 
         // Dark
         } else if (theme === 'Dark') {
@@ -49,7 +53,11 @@
             root.setProperty('--mainColour', 'black');
             root.setProperty('--secondary', 'rgb(152, 194, 241)');
             root.setProperty('--tertiary', 'rgb(148, 148, 255)');
-            root.setProperty('--contrast', 'midnightblue');
+            root.setProperty('--contrast', 'darkblue');
+            root.setProperty('--p1', 'rgb(162, 162, 212)')
+            root.setProperty('--p2', 'rgb(151, 212, 156)')
+            root.setProperty('--p1Secondary', 'rgb(52, 92, 150)')
+            root.setProperty('--p2Secondary', 'rgb(29, 80, 13)')
 
         }
 

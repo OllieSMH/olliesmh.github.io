@@ -23,10 +23,14 @@
 }
 
 .logo {
-    width: 3vw;
+    width: 2.8vw;
     top: 0;
     padding: 0;
     transition: 0.4s;
+}
+
+.logo:hover {
+    scale: 1.1;
 }
 
 /* Lines around the navBar */

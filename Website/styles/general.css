@@ -11,6 +11,10 @@
     --secondary: wheat;
     --tertiary: #999;
     --contrast: #333;
+    --p1: rgb(162, 162, 212);
+    --p2: rgb(151, 212, 156);
+    --p1Secondary: rgb(12, 12, 90);
+    --p2Secondary: rgb(29, 80, 13);
 }
 
 /* Body in sans-serif for ease of reading */
@@ -23,7 +27,7 @@ body {
     color: var(--mainColour);
     font-family: Helvetica, sans-serif;
     font-size: 1vw;
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
 }
 
 /* Minimum font size */

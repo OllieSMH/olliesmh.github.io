@@ -3,27 +3,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set, viewport, and compatibility -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Hobbies</title>
 
+    <!-- External style sheets for themes and general styling -->
     <link id="theme1" rel="stylesheet" href="styles/styles.css">
     <link id="theme2" rel="stylesheet" href="styles/general.css">
     <link id="theme3" rel="stylesheet" href="styles/navBar.css">
+    <link id="theme4" rel="stylesheet" href="styles/connect3.css">
 </head>
 <body>
+    <!-- Header atop page -->
     <header>
-        <!-- Header atop page -->
         <div id="header" class="mainHeader">
             <h1 class="pageTopper">Hobbies</h1>
             <hr>
         </div>
     </header>
 
-    <nav id="navBar">
     <!-- Navigation bar -->
+    <nav id="navBar">
+    <!-- Navigation bar with list items for different pages, theme selection, and logo -->
         <ul class="navBar">
             <li class="button" onclick="pageChanger('resume.html')">Resume</li>
             <li class="buttonActive" onclick="pageChanger('hobbies.html')">Hobbies</li>
@@ -32,6 +36,7 @@
                 <label for="themes">Theme:</label>
             </li>
             <li>
+                <!-- Theme selection dropdown -->
                 <select class="button" name="themes" id="toggleTheme">
                     <option value="Light">Light</option>
                     <option value="Dark">Dark</option>
@@ -40,11 +45,13 @@
                 </select>
             </li>
             <li><button id="applyTheme" type="button" class="button" onclick="getTheme()">Apply Theme</button></li>
-            <li><a class="button" href="home.html"><img src="Images/New Logo.png" alt="logo" class="logo"></a></li>
+            <li><button id="resetGame" class="button" onclick="resetGame()">Reset Board</button> </li>
+            <li><a class="button" href="home.html"><img src="images/newLogo.png" alt="logo" class="logo"></a></li>
         </ul>
         <hr>
     </nav>
 
+    <!-- Main content section -->
     <main>
         <!-- Video Games -->
         <article id="videoGames" class="sidebarLeft">
@@ -61,15 +68,118 @@
          <!-- Showcase -->
          <article id="showcase" class="centered">
             <h1>SHOWCASE</h1><hr>
+            <header>
+                <h1>Connect-3 Game</h1>
+            </header>
+        
+            <div id="playButton" class="play" onclick="playGame()"><h1 id="playButtonHeader">Play</h1></div>
+        
+            <!--Game Board-->
+            <div class="container">
+                <main id="board" class="board">
+                    <section id="rowOne" class="row">
+                        <section id="colOne" class="column">
+                            <div id="0" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="10" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="20" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                    </section>
+                    <section id="rowTwo" class="row">
+                        <section id="colOne" class="column">
+                            <div id="1" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="11" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="21" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                    </section>
+                    <section id="rowThree" class="row">
+                        <section id="colOne" class="column">
+                            <div id="2" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="12" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="22" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                    </section>
+                    <section id="rowFour" class="row">
+                        <section id="colOne" class="column">
+                            <div id="30" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="40" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="50" class="gameCell" onclick="main(0)"></div>
+                        </section>
+                    </section>
+                    <section id="rowFive" class="row">
+                        <section id="colOne" class="column">
+                            <div id="31" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="41" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="51" class="gameCell" onclick="main(1)"></div>
+                        </section>
+                    </section>
+                    <section id="rowSix" class="row">
+                        <section id="colOne" class="column">
+                            <div id="32" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                        <section id="colTwo" class="column">
+                            <div id="42" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                        <section id="colThree" class="column">
+                            <div id="52" class="gameCell" onclick="main(2)"></div>
+                        </section>
+                    </section>
+                </main>        
+        </article>
+
+        <!-- Sports -->
+        <article id="sports" class="sidebarRight">
+            <h4>SPORTS</h4><hr>
+            <ul>
+                <li id="chels" class="extLink" onclick="external('https://www.chelseafc.com/en')">Chelsea FC</li>
+                <li id="cavs" class="extLink" onclick="external('https://cavalryfc.canpl.ca')">Cavalry FC</li>
+                <li id="necks" class="extLink" onclick="external('https://calgaryroughnecks.com')">Calgary Roughnecks</li>
+                <li id="hawks" class="extLink" onclick="external('https://www.seahawks.com')">Seattle Seahawks</li>
+                <li id="habs" class="extLink" onclick="external('https://www.nhl.com/canadiens/')">Montreal Canadians</li>
+                <li id="flames" class="extLink" onclick="external('https://www.nhl.com/flames/')">Calgary Flames</li>
+            </ul>
+        </article>
+
+        <!-- Displays winner -->
+        <article class="connect3SidebarRight">
+            <h1 id="gameResult" class="neutral">The game is ongoing</h1><br><br>
+        </article>
+
+        <!-- Displays who's turn it is -->
+        <article id="playerArticle" class="connect3SidebarLeft">
+            <h1 id="playerDisplay" class="resultBlue">Blue</h1>
         </article>
     </main>
 
-    <footer class="footer">
+    <!-- Footer section -->
+    <footer id="hobbiesFooter" class="footer">
         <hr>
+        <!-- Copyright information with a link to the resume page -->
         <p>© 2023 <a href="resume.html">Oliver S. Michaud Howes.</a> All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript files for theme and general functionality -->
     <script src="js/theme.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/connect3.js"></script>
 </body>
 </html>

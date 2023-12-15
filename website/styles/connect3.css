@@ -1,0 +1,184 @@
+.play {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 30vw;
+    padding: 4vw;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: var(--secondary);
+    color: var(--mainColour);
+    transition: 0.4s ease-in-out;
+}
+
+.play:hover {
+    background-color: var(--tertiary);
+    color: var(--mainColour);
+    scale: 0.95;
+}
+
+.board {
+    display: grid;
+    width: 20vw;
+    height: 2 * width;
+    grid-template-columns: auto auto auto;
+    background-color: (var(--background));
+    color: (var(--mainColour));
+}
+
+/* Minimum board size */
+@media screen and (max-width: 600px) {
+    .board {
+        width: max-content;
+    }
+
+    .container {
+        width: 52vw;
+    }
+
+    .gameCell p {
+        width: 40%;
+        height: 40%;
+        font-size: 3px;
+    }
+}
+
+.container {
+    margin-left: -1.5vw;
+    width: 50vw;
+    max-height: 70vh;
+    margin-top: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameCell {
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+    background-color: var(--background);
+    color: var(--contrast);
+    border: 2px solid var(--secondary);
+    user-select: none;
+}
+
+.gameCell:hover {
+    cursor: pointer;
+    background: var(--secondary);
+    color: var(--contrast);
+}
+
+#resetGame {
+    margin-left: 16vw;
+    width: 12vw;
+}
+
+#connect3Display {
+    display: none;
+}
+
+.resultBlue {
+    transition: background 0.2s ease-in-out;
+    background-color: var(--p1);
+    color: var(--mainColour);
+}
+.resultGreen {
+    transition: background 0.2s ease-in-out;
+    background-color: var(--p2);
+    color: var(--mainColour);
+}
+.resultTie {
+    background-color: var(--secondary);
+    color: var(--mainColour);
+}
+.neutral {
+    transition: background 0.2s ease-in-out;
+    color: var(--mainColour);
+    user-select: none;
+}
+.blue {
+    transition: background 0.2s ease-in-out;
+    background-color: var(--p1);
+    color: var(--mainColour);
+    user-select: none;
+}
+.blue:hover {
+    background-color: var(--p1Secondary);
+}
+.green {
+    transition: background 0.2s ease-in-out;
+    background-color: var(--p2);
+    color: var(--mainColour);
+    user-select: none;
+}
+.green:hover {
+    background-color: var(--p2Secondary);
+}
+
+/* Sidebar Styles */
+.connect3SidebarLeft {
+    display: none;
+    float: left;
+    width: 20vw;
+    height: fit-content;
+    min-width: 15vw;
+    padding: 1vw;
+    margin-top: -20vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary);
+    text-align: left;
+    font-size: 1vw;
+}
+
+.connect3SidebarRight {
+    display: none;
+    float: right;
+    width: 20vw;
+    height: fit-content;
+    min-width: 15vw;
+    padding: 1vw;
+    margin: -10vw 1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+    background-color: var(--tertiary);
+    text-align: right;
+    font-size: 1vw;
+}
+
+.connect3SidebarRight h1, h2, h3, h4, h5, h6 {
+    color: var(--contrast);
+}
+
+.connect3SidebarLeft h1, h2, h3, h4, h5, h6 {
+    color: var(--contrast);
+}
+
+.connect3SidebarRight ul {
+    margin-left: 0;
+    padding-left: 2vw;
+}
+
+.connect3SidebarLeft ul {
+    margin-left: 0;
+    padding-left: 2vw;
+}
+
+.connect3SidebarRight p {
+    color: var(--mainColour);
+    font-size: 1.1vw;
+}
+
+.connect3SidebarLeft p {
+    color: var(--mainColour);
+    font-size: 1.1vw;
+}

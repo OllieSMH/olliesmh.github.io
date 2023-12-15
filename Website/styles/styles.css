@@ -44,6 +44,12 @@
     transition: 0.6s ease;
 }
 
+/* Links to external pages */
+.extLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* Central header for body */
 .centralHeader {
     margin: 0 40vw;
@@ -64,6 +70,17 @@
     background-color: var(--secondary);
     text-align: left;
     font-size: 1vw;
+    transition: 0.4s ease-in-out;
+}
+
+.sidebarLeft:hover {
+    box-shadow: 0 0 1.1vw rgba(0, 0, 0, 0.3);
+    scale: 0.95;
+}
+
+.sidebarRight:hover {
+    box-shadow: 0 0 1.1vw rgba(0, 0, 0, 0.3);
+    scale: 0.95;
 }
 
 .sidebarRight {
@@ -77,19 +94,23 @@
     background-color: var(--tertiary);
     text-align: right;
     font-size: 1vw;
+    transition: 0.4s ease-in-out;
 }
 
 .sidebarRight h1, h2, h3, h4, h5, h6 {
     color: var(--contrast);
+    transition: 0.4s ease-in-out;
 }
 
 .sidebarLeft h1, h2, h3, h4, h5, h6 {
     color: var(--contrast);
+    transition: 0.4s ease-in-out;
 }
 
 .sidebarRight ul {
     margin-left: 0;
     padding-left: 2vw;
+    transition: 0.4s ease-in-out;
 }
 
 .sidebarLeft ul {
@@ -107,35 +128,7 @@
     font-size: 1.1vw;
 }
 
-/* Resume Page styles */
-
-#education {
-    display: inline-block;
-}
-
-#summary {
-    display: inline-block;
-}
-
-#awards {
-    margin-top: -60vw;
-    margin-left: -21vw;
-    background-color: var(--tertiary);
-}
-
-#languages {
-    margin-top: -18vw;
-    background-color: var(--secondary);
-}
-
-#links {
-    margin-top: 0;
-}
-
-#skills {
-    margin-top: -22vw;
-}
-
+/* Main body content */
 .centered {
     display:inline-block;
     height: fit-content;
@@ -168,15 +161,121 @@
     font-size: 1.4vw;
 }
 
-.extLink:hover {
-    text-decoration: underline;
-    cursor: pointer;
+/* Resume Page styles */
+
+#education {
+    display: inline-block;
 }
 
-/* Footer */
+#summary {
+    display: inline-block;
+}
+
+#awards {
+    margin-top: -60vw;
+    margin-left: -21vw;
+    background-color: var(--tertiary);
+}
+
+#languages {
+    margin-top: -18vw;
+    background-color: var(--secondary);
+}
+
+#links {
+    margin-top: 0;
+}
+
+#skills {
+    margin-top: -22vw;
+}
+
+/* Contact Me styles */
+#contactDetails {
+    background-color: var(--tertiary);
+}
+
+#contactSomething {
+    display: inline-block;
+    background-color: var(--secondary);
+}
+
+/* Form styles */
+#contactForm  {
+    font-size: 1.7vw;
+    min-height: fit-content;
+    transition: 0.4s;
+    padding: 3vw;
+    height: 95vw;
+    max-width: 70vw;
+}
+
+.formSet {
+    display:inline-block;
+    height: fit-content;
+    margin: 0 1vw;
+    padding: 0 1vw;
+    width: 62vw;
+    text-align: center;
+}
+
+.formSet label {
+    clear: left;
+    float: left;
+    background-color: var(--tertiary);
+    border: 1px solid var(--contrast);
+    color: var(--mainColour);
+    clear: right;
+    font-size: 1vw;
+    width: 17vw;
+    height: 2vw;
+    margin: 1vw 1vw;
+    padding: 1vw;
+    padding-bottom: 2vw;
+}
+
+.formSet input {
+    clear: right;
+    float: right;
+    background-color: var(--secondary);
+    border: 1px solid var(--contrast);
+    color: var(--mainColour);
+    clear: right;
+    font-size: 1vw;
+    width: 36vw;
+    height: 2vw;
+    margin: 1vw 1vw;
+    padding: 1.5vw;
+}
+
+.formSet textarea {
+    clear: right;
+    float: right;
+    background-color: var(--secondary);
+    border: 1px solid var(--contrast);
+    color: var(--mainColour);
+    clear: right;
+    font-size: 1vw;
+    width: 36vw;
+    height: 2vw;
+    margin: 1vw 1vw;
+    padding: 1.5vw;
+    max-width: 36vw;
+    min-width: 36vw;
+    height: 10vw;
+    max-height: 39vw;
+}
+
+#submit {
+    height: 4vw;
+    margin: 0 1vw;
+    padding: 1vw;
+}
+
+/* Footers */
 .footer {
     clear: both;
-    margin-top: 15vw;
+    margin-top: 20vw;
     padding: 0;
     min-width: 100vw;
     max-width: 100vw;
@@ -186,6 +285,34 @@
     font-size: 0.6vw;
 }
 
+#hobbiesFooter {
+    margin-top: 10vw;
+}
+
+/* Sports teams */
+#chels:hover {
+    color: rgb(3, 70, 148);
+}
+
+#cavs:hover {
+    color: rgb(205, 43, 43);
+}
+
+#necks:hover {
+    color: black;
+}
+
+#hawks:hover {
+    color: rgb(105, 190, 40);
+}
+
+#habs:hover {
+    color: rgb(175, 30, 45);
+}
+
+#flames:hover {
+    color: rgb(210, 0, 28);
+}
 
 
 
@@ -228,7 +355,7 @@
 /* Shhhhhhh */
 
 #secret1 {
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 #secret1:hover {
@@ -236,7 +363,7 @@
     transform: scale(0.9);
     background-color: var(--tertiary);
     color: var(--background);
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .secretGate {
@@ -294,7 +421,7 @@
     transform: scale(0.9);
     background-color: var(--tertiary);
     color: var(--background);
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .secretSidebarRight:hover {
@@ -302,7 +429,7 @@
     transform: scale(0.9);
     background-color: var(--tertiary);
     color: var(--background);
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .secretCentralHeader {

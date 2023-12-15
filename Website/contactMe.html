@@ -3,28 +3,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set, viewport, and compatibility -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Contact Me</title>
 
+    <!-- External style sheets for themes and general styling -->
     <link id="theme1" rel="stylesheet" href="styles/styles.css">
     <link id="theme2" rel="stylesheet" href="styles/general.css">
     <link id="theme3" rel="stylesheet" href="styles/navBar.css">
 </head>
 <body>
+    <!-- Header atop page -->
     <header>
-        <!-- Header atop page -->
         <div id="header" class="mainHeader">
             <h1 class="pageTopper">Contact Me</h1>
             <hr>
         </div>
     </header>
 
-    <nav id="navBar">
     <!-- Navigation bar -->
-        <ul class="navBar">
+    <nav id="navBar">
+        <!-- Navigation bar with list items for different pages, theme selection, and logo -->
+            <ul class="navBar">
             <li class="button" onclick="pageChanger('resume.html')">Resume</li>
             <li class="button" onclick="pageChanger('hobbies.html')">Hobbies</li>
             <li class="buttonActive" onclick="pageChanger('contactMe.html')">Contact Me</li>
@@ -32,6 +35,7 @@
                 <label for="themes">Theme:</label>
             </li>
             <li>
+                <!-- Theme selection dropdown -->
                 <select class="button" name="themes" id="toggleTheme">
                     <option value="Light">Light</option>
                     <option value="Dark">Dark</option>
@@ -40,21 +44,88 @@
                 </select>
             </li>
             <li><button id="applyTheme" type="button" class="button" onclick="getTheme()">Apply Theme</button></li>
-            <li><a class="button" href="home.html"><img src="Images/New Logo.png" alt="logo" class="logo"></a></li>
+            <li><a class="button" href="home.html"><img src="images/newLogo.png" alt="logo" class="logo"></a></li>
         </ul>
         <hr>
     </nav>
 
+    <!-- Main content section -->
     <main>
-        <!-- General body filler for each page -->
+        <!-- Contact details -->
+        <article id="contactDetails" class="sidebarLeft">
+            <h4>CONTACT DETAILS</h4><hr>
+            <!-- List of contact details with links -->
+            <ul>
+                <li id="text" class="extLink"><a href="sms:+14039702054?body=Hello%20there!%20My%20name%20is%20" target="_blank">(403)-970-2054</a></li>
+                <li id="email" class="extLink"><a href="mailto:brreeoow@gmail.com?subject=Hello%20there!&body=Hello,%20my%20name%20is%20" target="_blank">brreeoow@gmail.com</a></li>
+                <li id="linkedin" class="extLink" onclick="external('https://www.linkedin.com/in/oliver-howes/')">LinkedIn</li>
+            </ul>
+        </article>
+
+        <!-- Contact me form -->
+        <form action="https://formspree.io/f/mleqrrak" method="post" target="_blank">
+            <fieldset id="contactForm" class="centered">
+
+                <!-- Form title -->
+                <h1>CONTACT ME FORM</h1><hr>
+
+                <!-- Form input fields with labels -->
+                <div class="formSet">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="formSet">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+        
+                <div class="formSet">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="formSet">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                </div>
+        
+                <div class="formSet">
+                    <label for="companyName">Company Name:</label>
+                    <input type="text" id="companyName" name="companyName">
+                </div>
+        
+                <div class="formSet">
+                    <label for="companyAddress">Company Address:</label>
+                    <input type="text" id="companyAddress" name="companyAddress">
+                </div>
+        
+                <div class="formSet">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="formSet">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="20" required></textarea>
+                </div>
+    
+                <!-- Form submission button -->
+                <div class="formSet">
+                    <input id="submit" class="button" type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
     </main>
 
+    <!-- Footer section -->
     <footer class="footer">
         <hr>
+        <!-- Copyright information with a link to the resume page -->
         <p>© 2023 <a href="resume.html">Oliver S. Michaud Howes.</a> All Rights Reserved.</p>
     </footer>
 
-
+    <!-- JavaScript files for theme and general functionality -->
     <script src="js/theme.js"></script>
     <script src="js/script.js"></script>
 </body>
